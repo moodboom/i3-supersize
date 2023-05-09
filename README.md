@@ -39,11 +39,11 @@ cd ..
 git clone git@github.com:moodboom/i3-supersize.git
 cd i3-supersize
 git checkout next
-autoreconf --force --install
 rm -rf build/
 mkdir -p build && cd build/
-../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
-make && sudo make install && i3-msg restart
+meson ..
+ninja
+i3-msg restart
 ```
 
 Please refer to the [i3wm](https://www.i3wm.org) project for official documentation.

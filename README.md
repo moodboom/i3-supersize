@@ -1,15 +1,21 @@
-![Logo](docs/logo-30.png) i3: A tiling window manager
-=====================================================
+# i3-supersize
 
-[![Build Status](https://github.com/i3/i3/actions/workflows/main.yml/badge.svg)](https://github.com/i3/i3/actions/workflows/main.yml)
-[![Issue Stats](https://img.shields.io/github/issues/i3/i3.svg)](https://github.com/i3/i3/issues)
-[![Pull Request Stats](https://img.shields.io/github/issues-pr/i3/i3.svg)](https://github.com/i3/i3/pulls)
+![](https://github.com/moodboom/i3/raw/gaps-next-moodboom/docs/i3-supersize.gif)
 
-[![Packages](https://repology.org/badge/latest-versions/i3.svg)](https://repology.org/metapackage/i3/versions)
-[![Packages](https://repology.org/badge/tiny-repos/i3.svg)](https://repology.org/metapackage/i3/versions)
+## What is i3-supersize?
 
-i3 is a tiling window manager for X11.
+i3-supersize is a fork of [i3-gaps](https://github.com/Airblader/i3), which is a fork of [i3wm](https://www.i3wm.org), a tiling window manager for X11.
 
-For more information about i3, please see [the project's website](https://i3wm.org/) and [online documentation](https://i3wm.org/docs/).
+i3-supersize only has one feature added to its excellent upstream projects.  But for my use case, it is an essential feature addressing fatal flaws in i3's window management.  In my optimized workflow on a 4K monitor, I dynamically resize my tiled windows constantly, via keyboard, and need any window to grow and shrink without arbitrary constraints, except to stop shrinkage at a minimum useable width and minimum useable height.
 
-For information about contributing to i3, please see [CONTRIBUTING.md](.github/CONTRIBUTING.md).
+A short video provides the simplest explanation.  See GIF above, or [download this hirez example](https://github.com/moodboom/i3/raw/gaps-next-moodboom/docs/i3-supersize.mp4).  Current i3/i3-gaps will fail miserably trying to do this, hitting arbitrary/buggy sub-container size constraints.
+
+## How do I install, configure, etc.?
+
+Install using the **gaps-next-moodboom** branch.
+
+Please refer to the [i3-gaps](https://github.com/Airblader/i3) project for excellent documentation, including detailed [installation instructions](https://github.com/Airblader/i3/wiki/installation).
+
+# History
+
+I maintain this fork because I was unable to convince the authors to merge my changes.  The changes are minor, and I should be able to pull upstream changes on a regular basis.

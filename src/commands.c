@@ -499,6 +499,16 @@ static bool cmd_resize_tiling_direction(I3_CMD, Con *current, const char *direct
     return resize_neighboring_cons(first, second, px, ppt);
 }
 
+// -----------------------
+// MDM My 2018 enhancement
+// -----------------------
+static int compare_cons_by_percent(const void *a, const void *b) {
+    Con *first = *((Con **)a);
+    Con *second = *((Con **)b);
+    return second->percent - first->percent;
+}
+// -----------------------
+
 static bool cmd_resize_tiling_width_height(I3_CMD, Con *current, const char *direction, int px, double ppt) {
     LOG("width/height resize\n");
 
@@ -566,12 +576,6 @@ static bool cmd_resize_tiling_width_height(I3_CMD, Con *current, const char *dir
     // -----------------------
     // MDM My 2018 enhancement
     // -----------------------
-
-    static int compare_cons_by_percent(const void *a, const void *b) {
-        Con *first = *((Con **)a);
-        Con *second = *((Con **)b);
-        return second->percent - first->percent;
-    }
 
     LOG("current->percent before = %f\n", current->percent);
 
